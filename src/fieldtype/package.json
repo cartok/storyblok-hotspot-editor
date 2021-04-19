@@ -1,0 +1,9 @@
+{
+  "main": "main.js",
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "nanoid": "3.1.20",
+    "refresh-rate": "1.0.0",
+    "throttle-debounce": "3.0.1"
+  }
+}
