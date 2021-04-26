@@ -1,11 +1,8 @@
 export const getMousePosition = (event, container) => {
   container = container || event.target
-  if (!(container instanceof Node)) {
-    throw new Error('The parent node or scope node parameter must be of type HTMLNode.')
-  }
 
-  if (![Node.ELEMENT_NODE, Node.TEXT_NODE].some(type => type === container.nodeType)) {
-    throw new Error('The node to relate to is not an element or text node.')
+  if (!(container instanceof Element)) {
+    throw new Error(`The 'container' does not have the 'Element' interface.`)
   }
 
   const rect = container.getBoundingClientRect()
